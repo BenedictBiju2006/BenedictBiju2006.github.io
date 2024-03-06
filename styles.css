@@ -1,0 +1,8 @@
+.title-container{
+    display: flex;
+}
+
+.title{
+    font-family: "Borel", sans-serif;
+    size: 60px;
+}
