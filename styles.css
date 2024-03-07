@@ -1,8 +1,16 @@
+body{
+    background-color: rgb(3, 70, 89);
+}
 .title-container{
     display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .title{
     font-family: "Borel", sans-serif;
-    size: 60px;
+    font-size: 100px;
+    color: white;
+    display: block;
+    transition: 2s;
 }
