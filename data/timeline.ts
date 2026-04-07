@@ -8,33 +8,52 @@ export type TimelineEvent = {
 
 export const timelineEvents: TimelineEvent[] = [
   {
-    name: "Freelance Product Design Practice",
-    start: "2022-03",
-    end: "2022-12",
+    name: "IGCSE Education",
+    start: "2017",
+    end: "2021",
     description:
-      "I partnered with small founders to shape early product ideas into clickable prototypes and production-ready interfaces. This period sharpened my visual language, taught me how to run fast discovery cycles, and helped me develop a pragmatic design process grounded in user feedback and measurable product goals.",
+      "During my IGCSE years, I developed a strong academic base in mathematics, science, and computing fundamentals. I became comfortable with structured problem-solving and learned how to break larger tasks into smaller, testable steps. This period also sparked my interest in software development through school projects, where I first experienced how code can automate repetitive work and improve real outcomes.",
   },
   {
-    name: "Interactive Data Storytelling",
-    start: "2023-01",
-    end: "2023-10",
+    name: "A-Levels Education",
+    start: "2021",
+    end: "2023",
     description:
-      "I designed and built interactive visual narratives for a media-focused startup that needed high-performance web experiences. I led architecture discussions, introduced reusable design tokens, and created a collaborative workflow that allowed engineering and editorial teams to ship rich stories on weekly timelines.",
-    projectSlug: "interactive-data-stories",
+      "In A-Levels, I deepened my analytical thinking and strengthened my technical discipline by balancing theoretical subjects with applied coursework. I focused on writing clearer logic, managing deadlines, and communicating ideas effectively in group settings. The experience prepared me for university-level computer science by reinforcing rigorous study habits and a practical mindset for building and evaluating technical solutions.",
   },
   {
-    name: "Senior Frontend Engineer",
-    start: "2023-11",
-    end: "2025-02",
+    name: "Teaching Assistant",
+    start: "2024",
+    end: "2024",
     description:
-      "I joined a product team focused on workflow automation and owned the frontend platform layer. I drove migration to modern tooling, improved accessibility standards, and reduced performance regressions with a stronger observability setup. The role deepened my leadership skills across code quality, mentoring, and delivery.",
-    projectSlug: "workflow-automation-suite",
+      "As a Teaching Assistant in 2024, I supported students during labs and helped explain programming concepts in approachable ways. I reviewed exercises, clarified debugging strategies, and encouraged structured thinking rather than trial-and-error coding. This role improved my communication skills, patience, and technical confidence, while giving me a better understanding of how to mentor peers and guide learning outcomes.",
   },
   {
-    name: "Independent Studio",
-    start: "2025-03",
+    name: "Transcript Automation Project",
+    start: "2024",
     description:
-      "I launched an independent studio to build polished digital products from concept to deployment. My current work spans product strategy, interface engineering, and narrative-driven marketing websites. The studio model allows me to collaborate deeply with mission-driven teams while maintaining high execution quality.",
-    projectSlug: "studio-portfolio-platform",
+      "I built a transcript automation workflow to process PDF reports and generate consistent transcript-ready outputs. The project combined parsing logic, validation checkpoints, and streamlined formatting to reduce manual data entry. It taught me how to design reliable pipelines for structured extraction and highlighted the value of automation in reducing repetitive administrative effort while maintaining quality and accuracy.",
+    projectSlug: "transcript-automation",
+  },
+  {
+    name: "Discord Bot Project",
+    start: "2023",
+    description:
+      "I developed a Chess.com-integrated Discord bot to support club operations, including player tracking and data retrieval features. The system used SQL for persistent storage and API integration for up-to-date chess data. Building this project strengthened my backend reasoning, command design, and data modeling skills, while showing how lightweight automation can improve coordination in student-led communities.",
+    projectSlug: "chess-discord-bot",
+  },
+  {
+    name: "Megasteel Website",
+    start: "2025",
+    description:
+      "For Megasteel, I created a responsive corporate website using React and TypeScript, then deployed it through Vercel. I focused on clean navigation, readable structure, and consistency across devices so business information could be accessed quickly. This project strengthened my frontend engineering workflow and reinforced the importance of balancing performance, maintainability, and visual polish in real client-facing applications.",
+    projectSlug: "megasteel-website",
+  },
+  {
+    name: "Grain App",
+    start: "2026",
+    description:
+      "Grain is an ongoing smart grocery app project that uses behavioral patterns and Firebase-backed services to improve shopping decisions. I am designing user flows around practical day-to-day needs, including planning, reminders, and personalized suggestions. The project is helping me integrate mobile UX thinking with scalable backend patterns, while iterating toward a product that is both useful and technically resilient.",
+    projectSlug: "grain-app",
   },
 ];
