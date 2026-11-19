@@ -16,12 +16,14 @@ export default function HomePage() {
           Computer Science student building real-world systems, automation tools, and full-stack applications
         </p>
         <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
-          <Link
+          <div className="text-black">
+            <Link
             className="rounded-full bg-white px-7 py-3 text-sm font-medium text-black transition hover:bg-zinc-200"
             href="/projects"
           >
             View Projects
           </Link>
+          </div>
           <Link
             className="rounded-full border border-zinc-700 px-7 py-3 text-sm font-medium text-zinc-100 transition hover:border-zinc-500 hover:bg-zinc-900"
             href="/timeline"

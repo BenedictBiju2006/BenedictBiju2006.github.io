@@ -11,19 +11,23 @@ const components = {
   p: (props: React.HTMLAttributes<HTMLParagraphElement>) => (
     <p className="mt-4 text-lg leading-8 text-zinc-300" {...props} />
   ),
-  img: ({ src = "", alt = "", ...rest }: React.ImgHTMLAttributes<HTMLImageElement>) => (
-    <span className="my-8 block w-full overflow-hidden rounded-2xl border border-zinc-800">
-      <Image
-        src={src}
-        alt={alt}
-        width={1600}
-        height={900}
-        className="h-auto w-full object-cover"
-        unoptimized
-        {...rest}
-      />
-    </span>
-  ),
+  img: ({ src, alt = "", width, height, ...rest }: React.ImgHTMLAttributes<HTMLImageElement>) => {
+    if (typeof src !== "string" || !src) return null;
+
+    return (
+      <span className="my-8 block w-full overflow-hidden rounded-2xl border border-zinc-800">
+        <Image
+          {...rest}
+          src={src}
+          alt={alt}
+          width={Number(width) || 1600}
+          height={Number(height) || 900}
+          className="h-auto w-full object-cover"
+          unoptimized
+        />
+      </span>
+    );
+  },
 };
 
 type MDXRendererProps = {
