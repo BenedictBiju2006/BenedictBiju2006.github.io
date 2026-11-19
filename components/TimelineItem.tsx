@@ -28,7 +28,7 @@ export function TimelineItem({ event, index, activeIndex }: TimelineItemProps) {
       />
       <div className={`rounded-2xl border p-6 transition ${isActive ? "border-zinc-500 bg-zinc-900" : "border-zinc-800 bg-zinc-950"}`}>
         <p className="text-xs tracking-[0.2em] text-zinc-500 uppercase">
-          {event.start} {event.end ? `— ${event.end}` : "— Present"}
+          {formatDate(event.start)} – {event.end ? formatDate(event.end) : "Present"}
         </p>
         <h3 className="mt-2 text-2xl font-semibold tracking-tight text-zinc-100">{event.name}</h3>
         <p className="mt-4 leading-7 text-zinc-300">{event.description}</p>
@@ -40,4 +40,12 @@ export function TimelineItem({ event, index, activeIndex }: TimelineItemProps) {
       </div>
     </motion.article>
   );
+}
+
+export function formatDate(date: string): string {
+  return new Date(date).toLocaleDateString("en-GB", {
+    month: "short",
+    year: "numeric",
+    timeZone: "UTC",
+  });
 }

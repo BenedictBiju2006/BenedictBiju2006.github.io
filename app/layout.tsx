@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import "./globals.css";
 export const metadata: Metadata = {
   title: "Benedict Biju | Portfolio",
   description: "Computer Science student building real-world systems, automation tools, and full-stack applications.",

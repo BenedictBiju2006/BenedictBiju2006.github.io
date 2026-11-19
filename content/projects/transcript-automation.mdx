@@ -1,19 +1,27 @@
 ---
-title: "Transcript Automation App"
-date: "2024"
-description: "Automated transcript generation from PDF reports, reducing manual workload through parsing and workflow optimization."
+title: "Transcript Automation"
+date: "2024-03-26"
+description: "A C# desktop application that transforms structured academic report PDFs into consolidated, editable transcripts."
 ---
 
 ## Overview
 
-Transcript Automation App was designed to eliminate repetitive manual transcript entry from structured and semi-structured PDF reports. I created a processing pipeline that reads source documents, extracts required data points, validates fields, and formats consistent outputs for downstream use.
+Before university, while helping at my school as a teaching assistant, I observed that academic transcripts were prepared by manually transferring student marks from individual report PDFs into spreadsheets. The process involved repetitive data entry, reconciling subject names, and aligning results across academic terms.
 
-## Tech Stack
+I started this project to investigate whether existing report documents could be converted into structured data and used to generate transcripts with substantially less manual transcription.
 
-- C#
-- .NET
-- PDF Parsing
+## What I Built
 
-## Outcome
+I developed a Windows Forms application in C# using layout-aware PDF parsing. The parser identifies student details, academic periods, subjects, and marks using document coordinates and nearby labels, rather than treating PDF content as unstructured text.
 
-The app significantly reduced turnaround time for transcript preparation while improving consistency across records. The workflow also lowered human error rates by enforcing parsing rules and clear validation steps before export.
+I built a transcript model that combines multiple reports, normalizes subject names, sorts reporting periods chronologically, and maintains consistent subject alignment across IGCSE, AS Level, and A2 Level results. The desktop interface supports reviewing and editing extracted marks while previewing the original document.
+
+Using EPPlus, I implemented Excel export with dynamically generated result columns, qualification-specific averages and grades, grade reference tables, and formatting. The application also supports plain-text export.
+
+## Impact
+
+The resulting prototype implements the core workflow from report ingestion through review and transcript export. It illustrates how a software system can address a real administrative problem through structured extraction, data normalization, and document generation.
+
+The parser remains specialized to the original school's report layouts and the project was not completed as a general-purpose production system. It represents an early experience in identifying a real problem and translating it into an end-to-end software solution.
+
+[View the source code on GitHub.](https://github.com/BenedictBiju2006/TranscriptAutomation)

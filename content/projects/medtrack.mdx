@@ -1,0 +1,27 @@
+---
+title: "MedTrack — Medication Management Application"
+date: "2026-03-26"
+description: "An Android healthcare prototype combining medication tracking, symptom records, drug information, and AI-assisted adherence guidance."
+---
+
+## Overview
+
+MedTrack was developed as a university project to explore how a mobile application could help patients organize medication schedules and communicate useful information about their symptoms. The design also considers a clinician-facing perspective, where aggregate patient data can be presented in a concise dashboard.
+
+The project is an educational prototype, not a clinical system or a substitute for professional medical advice.
+
+## What I Built
+
+I developed the application using Kotlin and Jetpack Compose, with an MVVM-style architecture, ViewModels, StateFlow, and repository abstractions. An initial CSV-backed implementation evolved into a Room-based persistence layer for medication records, patients, symptoms, and generated guidance.
+
+Patient workflows include account access, medication scheduling, daily completion tracking, symptom logging, and historical records. I integrated the openFDA Drug Label API through Retrofit to retrieve drug information, and Google Gemini to generate brief medication-adherence suggestions and observations from aggregate dashboard statistics.
+
+The separate clinician interface summarizes metrics such as medication counts, commonly recorded symptoms, and symptom severity. The code separates interface state, data access, and external services.
+
+## Impact
+
+MedTrack demonstrates an end-to-end mobile workflow spanning local persistence, domain modelling, external API integration, and AI-assisted information presentation. It strengthened my understanding of reactive Android interfaces and the importance of separating data access from presentation.
+
+Its authentication, storage, and generated guidance are intended for academic demonstration. They have not been clinically validated or designed for production healthcare use.
+
+[View the public source code on GitHub.](https://github.com/BenedictBiju2006/Medtrack-public)

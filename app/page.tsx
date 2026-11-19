@@ -1,9 +1,5 @@
 import Link from "next/link";
 
-const languages = ["Python", "Java", "C#", "JavaScript"];
-const frameworks = ["React", "Flutter", ".NET", "Django"];
-const tools = ["Git", "Firebase", "VS Code", "IntelliJ", "Android Studio"];
-
 export default function HomePage() {
   return (
     <section className="flex min-h-[calc(100vh-4rem)] items-center justify-center px-6 py-12">
@@ -30,12 +26,6 @@ export default function HomePage() {
           >
             See Timeline
           </Link>
-        </div>
-
-        <div className="mt-14 grid gap-6 text-left sm:grid-cols-3">
-          <SkillGroup title="Languages" items={languages} />
-          <SkillGroup title="Frameworks" items={frameworks} />
-          <SkillGroup title="Tools" items={tools} />
         </div>
       </div>
     </section>

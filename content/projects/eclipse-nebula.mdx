@@ -1,0 +1,25 @@
+---
+title: "Eclipse Nebula — Turn-Based Survival Game"
+date: "2026-04-26"
+description: "A Java-based academic game project exploring extensible object-oriented mechanics and dynamic environmental hazards."
+---
+
+## Overview
+
+Eclipse Nebula is a turn-based science-fiction survival game developed for a software engineering assignment. The project provided a setting for applying object-oriented design principles to interacting game systems, where new mechanics must integrate with an existing engine without requiring extensive changes to unrelated components.
+
+A central technical challenge was modelling environmental effects that influence terrain, characters, and behaviour over successive turns.
+
+## What I Built
+
+I worked on a Java game built on the supplied FIT2099 teaching engine. The project includes actor behaviours, item capabilities, terrain interactions, turn-based actions, and environmental lighting mechanics.
+
+One of the more distinctive features is an integration with NASA's DONKI Solar Flare API. Game state determines a dynamic query window, and detected solar flares can introduce poisonous algae into the world. The algae spreads at rates determined by flare intensity, damages actors, influences movement decisions, and can be removed through existing gameplay interactions.
+
+The design separates external data sources, flare-impact strategies, algae growth patterns, and hazard-aware behaviours. It also includes caching and fallback mechanisms for external data, alongside a deterministic test-flare option.
+
+## Impact
+
+The project demonstrates how real-world data can drive changes in a simulated environment while preserving separation of responsibilities and extensibility. It provided practical experience with polymorphism, strategy-based design, dependency inversion, and integrating new functionality into a pre-existing codebase.
+
+This was an academic project built on a provided game engine; the description concerns the game implementation and does not claim authorship of the underlying teaching framework.

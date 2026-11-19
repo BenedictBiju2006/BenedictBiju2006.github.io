@@ -1,19 +1,27 @@
 ---
-title: "Megasteel Corporate Website"
-date: "2025"
-description: "Responsive corporate website built with React and TypeScript, deployed on Vercel."
+title: "MegaSteel — Corporate Website and CMS"
+date: "2025-12-18"
+description: "A responsive corporate website and Git-backed content management system for a steel business in Botswana."
 ---
 
 ## Overview
 
-Megasteel Corporate Website is a modern web presence built to communicate services, company profile, and contact pathways clearly across desktop and mobile devices. I focused on clean structure, responsive layouts, and consistent UI behavior to match corporate branding and improve user trust.
+MegaSteel needed an online presence that made its product range and business information accessible to prospective customers. I initially built a corporate website, then expanded the project to address a practical maintenance problem: business staff should be able to update the site without understanding React, Git, or deployment workflows.
 
-## Tech Stack
+The objective was to provide a maintainable, business-oriented website without adding a separate database or paid content management subscription.
 
-- React
-- TypeScript
-- Vercel
+## What I Built
 
-## Outcome
+I developed the website using Next.js, React, TypeScript, and Tailwind CSS. It includes a responsive landing page, searchable product catalogue, category navigation, product detail pages, company information, and contact functionality.
 
-The deployed website provided a faster, more polished digital experience and improved information accessibility for prospective customers. By using a component-based approach, future content and page updates can be shipped quickly with minimal rework.
+I subsequently separated editable content from presentation into structured JSON documents for products, categories, pages, and site settings. I built a custom administration dashboard with form-based editors, image uploads, Google OAuth sign-in, and an approved-account access policy.
+
+The CMS uses GitHub as its content store, separating drafts from published content through branches. Staff can save changes, preview drafts, and publish updates through the dashboard, with published commits triggering the existing Vercel deployment workflow.
+
+## Impact
+
+The website provides MegaSteel with a digital catalogue and a central location for business information. The CMS creates a path for non-technical staff to maintain that content independently while retaining Git-backed version history and the existing deployment infrastructure.
+
+The project reflects a shift from building a public-facing website to designing an end-to-end maintainable system around the needs of its operators. No quantified traffic or administrative time savings have been established.
+
+[Visit the MegaSteel website.](https://www.megasteel.site/)

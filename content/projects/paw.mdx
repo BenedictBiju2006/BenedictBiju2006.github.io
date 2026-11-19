@@ -1,0 +1,31 @@
+---
+title: "PAW — Persistent Agentic Workspaces"
+date: "2026-10-19"
+description: "An experimental agentic platform that turns conversations into persistent data, interactive interfaces, and reusable software workflows."
+---
+
+## Overview
+
+PAW explores what happens when an AI conversation becomes a workspace rather than a temporary exchange of messages. I wanted to move beyond chatbots that repeatedly reconstruct context and instead give agents access to durable data, discoverable capabilities, and interfaces that users can interact with directly.
+
+The project investigates whether general-purpose language models can assemble useful applications from a constrained set of operations and UI components, without having to generate and execute arbitrary application code.
+
+## What I Built
+
+I designed a full-stack application using Next.js, TypeScript, React, and Supabase. Each workspace maintains structured collections, records, interface revisions, and independent conversation threads. An A2UI-based renderer converts validated interface definitions into interactive forms, tables, charts, and layouts.
+
+The agent runtime discovers tools and their schemas on demand through a Model Context Protocol (MCP) integration. It supports multiple model providers, streamed responses, execution limits, permission checks, and explicit approval for destructive operations. I also introduced token diagnostics to investigate the cost of context and tool descriptions.
+
+My latest experiment uses a local FLAN-T5-Small model, symbolic placeholders, and grammar-constrained decoding to translate loosely structured instructions into formal operations. Its goal is to reduce the application-specific context required by the primary model. This is preliminary research, not yet an integrated or validated replacement for tool calling.
+
+![PAW workspace conversation interface.](https://raw.githubusercontent.com/BenedictBiju2006/PAW/main/docs/screenshots/workspace_chat.png)
+
+![An interactive interface rendered within a PAW workspace.](https://raw.githubusercontent.com/BenedictBiju2006/PAW/main/docs/screenshots/workspace_interface.png)
+
+## Impact
+
+PAW demonstrates that conversational interaction, structured storage, and a configurable user interface can operate on the same persistent workspace. It has also become a practical environment for investigating agent reliability, context efficiency, and constrained generation.
+
+I used AI extensively during implementation and testing while retaining responsibility for architectural decisions, technical direction, and verification. The project remains an active prototype, with further experimentation needed to establish the reliability and efficiency of the proposed translator.
+
+[View the source code on GitHub.](https://github.com/BenedictBiju2006/PAW)

@@ -1,0 +1,27 @@
+---
+title: "Ranked — Semantic Ranking Platform"
+date: "2026-09-10"
+description: "A cross-domain ranking application exploring how structured personal preferences can be connected to real-world knowledge."
+---
+
+## Overview
+
+Ranked grew out of the idea that personal rankings should be more useful than static lists. Whether someone ranks films, restaurants, products, or entirely custom categories, the underlying system should be capable of representing those preferences consistently and eventually helping users understand them.
+
+My longer-term vision is a single ranking system that supports both conversational interaction and a traditional visual interface, with semantic information enriching the items being ranked.
+
+## What I Built
+
+I built the mobile application foundation using React Native, Expo, TypeScript, Supabase, and TanStack Query. The ranking domain supports creating and editing collections, managing entries, assigning ratings, and persisting changes. Repository abstractions separate domain operations from the storage implementation.
+
+I also developed a semantic layer that integrates with Wikidata. Its entity resolver searches for candidates, retrieves identity evidence, and distinguishes confirmed, unresolved, and local entities. A configurable profile catalogue provides a foundation for representing different types of ranked items without hard-coding the application around a single subject area.
+
+The conversational interface is an early scaffold; natural-language ranking commands and preference insights remain part of the intended roadmap rather than completed features.
+
+## Impact
+
+Ranked establishes a reusable ranking domain and an experimental approach to linking user-defined items with external knowledge. It demonstrates how a mobile application can separate user interactions, persistence, and semantic reasoning while preserving room for uncertain or custom entities.
+
+The project is ongoing, with the next challenge being the integration of conversational actions and semantic insights into the existing ranking workflow.
+
+[View the source code on GitHub.](https://github.com/BenedictBiju2006/Ranked)
