@@ -1,0 +1,37 @@
+
+.animated-background {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  background: #080a10;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.background-orb {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  filter: blur(100px);
+  opacity: 0.35;
+  will-change: transform;
+}
+
+.orb-one {
+  top: -15%;
+  left: -10%;
+  background: #d4d4d4;
+}
+
+.orb-two {
+  bottom: -20%;
+  right: -10%;
+  background: #ffffff;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .background-orb {
+    filter: blur(100px);
+  }
+}

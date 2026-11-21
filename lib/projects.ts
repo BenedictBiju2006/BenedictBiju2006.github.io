@@ -1,3 +1,4 @@
+
 import fs from "node:fs/promises";
 import path from "node:path";
 import matter from "gray-matter";
@@ -8,6 +9,7 @@ export type ProjectFrontmatter = {
   title: string;
   date: string;
   description: string;
+  image?: string;
 };
 
 export type ProjectMeta = ProjectFrontmatter & {
@@ -34,6 +36,7 @@ export async function getAllProjects(): Promise<ProjectMeta[]> {
         title: String(data.title ?? slug),
         date: String(data.date ?? "1970-01-01"),
         description: String(data.description ?? ""),
+        image: typeof data.image === "string" && data.image.trim() ? data.image.trim() : undefined,
       } satisfies ProjectMeta;
     }),
   );
@@ -53,6 +56,7 @@ export async function getProjectBySlug(slug: string): Promise<Project | null> {
       title: String(data.title ?? slug),
       date: String(data.date ?? "1970-01-01"),
       description: String(data.description ?? ""),
+      image: typeof data.image === "string" && data.image.trim() ? data.image.trim() : undefined,
       content,
     };
   } catch {

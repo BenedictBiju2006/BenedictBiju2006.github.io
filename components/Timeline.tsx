@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { motion, useMotionValueEvent, useScroll } from "framer-motion";
-import type { TimelineEvent } from "@/data/timeline";
+import type { TimelineEvent } from "@/lib/timeline";
 import { TimelineItem } from "./TimelineItem";
 
 type TimelineProps = {

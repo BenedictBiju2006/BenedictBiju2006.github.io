@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import "./globals.css";
+import Background from "../components/background";
 export const metadata: Metadata = {
   title: "Benedict Biju | Portfolio",
   description: "Computer Science student building real-world systems, automation tools, and full-stack applications.",
@@ -13,7 +14,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>
+      <body className="relative min-h-screen bg-black">
+        <Background />
+
         <header className="fixed left-0 right-0 top-0 z-50 border-b border-zinc-800/80 bg-black/30 backdrop-blur-xl">
           <nav className="mx-auto flex h-16 w-full max-w-6xl items-center justify-between px-6">
             <Link className="text-sm font-medium tracking-widest text-zinc-300 uppercase" href="/">
@@ -29,7 +32,8 @@ export default function RootLayout({
             </div>
           </nav>
         </header>
-        <main className="pt-16">{children}</main>
+
+        <main className="relative z-10 pt-16">{children}</main>
       </body>
     </html>
   );

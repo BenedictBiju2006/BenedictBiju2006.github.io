@@ -1,5 +1,5 @@
-import { HorizontalScroll } from "@/components/HorizontalScroll";
-import { ProjectCard } from "@/components/ProjectCard";
+
+import { ProjectGrid } from "@/components/ProjectGrid";
 import { getAllProjects } from "@/lib/projects";
 
 export default async function ProjectsPage() {
@@ -7,17 +7,18 @@ export default async function ProjectsPage() {
 
   return (
     <section className="min-h-[calc(100vh-4rem)] py-16">
-      <div className="mx-auto mb-8 max-w-7xl px-6">
-        <h1 className="text-4xl font-semibold tracking-tight text-zinc-100 sm:text-5xl">Projects</h1>
-        <p className="mt-4 max-w-2xl text-zinc-400">
-          Scroll sideways through selected work. 
-        </p>
+      <div className="mx-auto max-w-7xl px-6">
+        <div className="mb-12">
+          <h1 className="text-4xl font-semibold tracking-tight text-zinc-100 sm:text-5xl">
+            Projects
+          </h1>
+          <p className="mt-4 max-w-2xl text-zinc-400">
+            A collection of projects exploring software engineering, artificial intelligence, and systems development.
+          </p>
+        </div>
+
+        <ProjectGrid projects={projects} />
       </div>
-      <HorizontalScroll>
-        {projects.map((project) => (
-          <ProjectCard key={project.slug} project={project} />
-        ))}
-      </HorizontalScroll>
     </section>
   );
 }
