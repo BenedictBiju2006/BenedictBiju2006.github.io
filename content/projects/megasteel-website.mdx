@@ -1,27 +1,21 @@
 ---
-title: "MegaSteel — Corporate Website and CMS"
+title: "MegaSteel — Website, CMS & Business Integration"
 date: "2025-12-18"
-description: "A responsive corporate website and Git-backed content management system for a steel business in Botswana."
+description: "A corporate website and custom admin platform integrating content management with Zoho Books invoicing."
 ---
 
 ## Overview
 
-MegaSteel needed an online presence that made its product range and business information accessible to prospective customers. I initially built a corporate website, then expanded the project to address a practical maintenance problem: business staff should be able to update the site without understanding React, Git, or deployment workflows.
-
-The objective was to provide a maintainable, business-oriented website without adding a separate database or paid content management subscription.
+I built MegaSteel's corporate website and expanded it into an administration platform for a steel business in Botswana. The goal was to make both website maintenance and everyday sales operations easier for non-technical staff.
 
 ## What I Built
 
-I developed the website using Next.js, React, TypeScript, and Tailwind CSS. It includes a responsive landing page, searchable product catalogue, category navigation, product detail pages, company information, and contact functionality.
+Developed a responsive Next.js, React, and TypeScript website with a searchable product catalogue, product pages, and contact information. Built a GitHub-backed CMS with Google OAuth, image uploads, draft previews, and publishing through Vercel.
 
-I subsequently separated editable content from presentation into structured JSON documents for products, categories, pages, and site settings. I built a custom administration dashboard with form-based editors, image uploads, Google OAuth sign-in, and an approved-account access policy.
-
-The CMS uses GitHub as its content store, separating drafts from published content through branches. Staff can save changes, preview drafts, and publish updates through the dashboard, with published commits triggering the existing Vercel deployment workflow.
+Extended the admin dashboard with a server-side Zoho Books integration for customer and product lookup and draft invoice creation. Implemented mixed-unit pricing (quantity × optional length × rate), OAuth token handling, validation, Zoho-issued invoice numbers, and line-item custom fields that preserve original rates and lengths. Invoice editing is under refinement.
 
 ## Impact
 
-The website provides MegaSteel with a digital catalogue and a central location for business information. The CMS creates a path for non-technical staff to maintain that content independently while retaining Git-backed version history and the existing deployment infrastructure.
-
-The project reflects a shift from building a public-facing website to designing an end-to-end maintainable system around the needs of its operators. 
+The platform brings website updates and invoicing into one business-specific interface while keeping Zoho Books as the accounting system. Length-based pricing reduces the need for manual calculations; the invoicing workflow is still being tested.
 
 <u>[Visit the MegaSteel website.](https://www.megasteel.site/)</u>
