@@ -39,6 +39,13 @@ export default async function HomePage() {
               >
                 See Timeline
               </Link>
+
+              <Link
+                className="rounded-full border border-zinc-700 px-7 py-3 text-sm font-medium text-zinc-100 transition hover:border-zinc-500 hover:bg-zinc-900"
+                href="https://www.github.com/benedictbiju2006"
+              >
+                View GitHub
+              </Link>
             </div>
 
             <div className="mt-12">
