@@ -1,6 +1,9 @@
+import type { Metadata } from "next";
 
 import { ProjectGrid } from "@/components/ProjectGrid";
 import { getAllProjects } from "@/lib/projects";
+
+export const metadata: Metadata = { title: "Projects", description: "Software engineering, artificial intelligence and systems development projects by Benedict Biju.", alternates: { canonical: "/projects/" } };
 
 export default async function ProjectsPage() {
   const projects = await getAllProjects();
