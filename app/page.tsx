@@ -1,9 +1,12 @@
+import type { Metadata } from "next";
 
 import Link from "next/link";
 import { HeroSkills } from "@/components/HeroSkills";
 import { LandingExperience } from "@/components/LandingExperience";
 import { ProjectGrid } from "@/components/ProjectGrid";
 import { getAllProjects } from "@/lib/projects";
+
+export const metadata: Metadata = { alternates: { canonical: "/" } };
 
 export default async function HomePage() {
   const projects = await getAllProjects();
