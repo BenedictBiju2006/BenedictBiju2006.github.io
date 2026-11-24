@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://benedictbiju2006.github.io/sitemap.xml
