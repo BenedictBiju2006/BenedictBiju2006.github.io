@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { MDXRenderer } from "@/components/MDXRenderer";
 import { getAllProjects, getProjectBySlug } from "@/lib/projects";
@@ -5,6 +6,13 @@ import { getAllProjects, getProjectBySlug } from "@/lib/projects";
 type ProjectPageProps = {
   params: Promise<{ slug: string }>;
 };
+
+export async function generateMetadata({ params }: ProjectPageProps): Promise<Metadata> {
+  const { slug } = await params;
+  const project = await getProjectBySlug(slug);
+  if (!project) notFound();
+  return { title: project.title, description: project.description, alternates: { canonical: `/projects/${slug}/` } };
+}
 
 export async function generateStaticParams() {
   const projects = await getAllProjects();
