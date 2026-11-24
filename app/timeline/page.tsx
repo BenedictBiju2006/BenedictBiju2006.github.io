@@ -1,5 +1,8 @@
+import type { Metadata } from "next";
 import { Timeline } from "@/components/Timeline";
 import { getAllTimelineEvents } from "@/lib/timeline";
+
+export const metadata: Metadata = { title: "Timeline", description: "Academic and professional progression of Benedict Biju.", alternates: { canonical: "/timeline/" } };
 
 export default async function TimelinePage() {
   const timelineEvents = await getAllTimelineEvents();
