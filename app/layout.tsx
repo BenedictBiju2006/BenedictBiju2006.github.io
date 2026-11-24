@@ -3,7 +3,9 @@ import Link from "next/link";
 import "./globals.css";
 import Background from "../components/background";
 export const metadata: Metadata = {
-  title: "Benedict Biju | Portfolio",
+  metadataBase: new URL("https://benedictbiju2006.github.io"),
+  title: { default: "Benedict Biju | Software Developer Portfolio", template: "%s | Benedict Biju" },
+  robots: { index: true, follow: true },
   description: "Computer Science student building real-world systems, automation tools, and full-stack applications.",
 };
 
@@ -15,6 +17,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="relative min-h-screen bg-black">
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "Person", name: "Benedict Biju", url: "https://benedictbiju2006.github.io/", jobTitle: "Computer Science Student", sameAs: ["https://github.com/BenedictBiju2006"] }) }} />
         <Background />
 
         <header className="fixed left-0 right-0 top-0 z-50 border-b border-zinc-800/80 bg-black/30 backdrop-blur-xl">
